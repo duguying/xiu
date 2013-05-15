@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<META HTTP-EQUIV="expires" CONTENT="0"> 
+<title>修·长大|管理中心</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	color: #FFF;
+	font-family: '微软雅黑';
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0;
+}
+li{
+	list-style:none;
+	}
+</style>
+<style type="text/css">
+#head {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 24px;
+	background: #000024;
+	box-shadow: 0px 5px 4px #000024;
+	overflow: hidden;
+	z-index: 1;
+}
+#page {
+	position: fixed;
+	top: 24px;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+#head>ul {
+	display: inline-block;
+	margin: 2px;
+	overflow: hidden;
+}
+#head>ul>li {
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+}
+.msg {
+	position: relative;
+	float: right;
+	right: 70px;
+}
+.msg>li {
+}
+#time {
+	display: inline-block;
+	width: 190px;
+	cursor: pointer;
+}
+.menu {
+	position: fixed;
+	right: 10px;
+}
+.menu>li {
+	clear: both;
+	float: right !important;
+}
+.hide {
+	display: none;
+}
+#m_btn {
+	box-shadow: 0px 0px 90px #CC0099 inset;
+}
+.son1{
+	border:1px solid;
+	padding: 0 0px;
+	background-color:#09F;
+	}
+.son1>li{
+	padding:0 4px;
+	cursor:pointer;
+	}
+.son1>li:hover{
+	background-color: #FFF;
+	}
+.son1>li>a{
+	display:block;
+	}
+.son1>li>a:hover{
+	color: #000;
+	}
+
+</style>
+<script type="text/javascript" src="{$config['root']}Public/js/jquery-1.9.0.js"></script>
+</head>
+
+<body>
+<div id="head">
+  <ul class="tags">
+    <li><a href="{:U('page/welcome')}" target="main">欢迎页面</a></li>
+    <li>用户管理</li>
+    <li>评论管理</li>
+    <li>话题管理</li>
+    <li><a href="{:U('page/phpinf')}" target="main">服务器PHP信息</a></li>
+  </ul>
+  <ul class="msg">
+    <li>IP地址:{$ip}</li>
+    <li>服务器时间:<a id="time" title="本地时间[对时]">{$config['time']}</a></li>
+    <li>管理员：<font style="color:#F00;">{$config['user']}</font>|<a href="{:U('control/logout')}">退出</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="m_btn" style="display:block !important; border:#C30 solid 1px; box-shadow:0px 0px 10px #CC0099 inset; padding:0 4px; cursor:pointer;">菜单</li>
+    <li>
+      <ul class="son1 hide">
+        <li><a>管理用户</a></li>
+        <li><a>管理课程</a></li>
+        <li><a>管理老师</a></li>
+        <li><a>管理评论</a></li>
+        <li><a>管理话题</a></li>
+        <li><a href="{:U('page/setting')}" target="main">系统设置</a></li>
+        <li><a>系统参数</a></li>
+        <li><a href="{:U('page/phpinf')}" target="main">PHP参数</a></li>
+        <li><a>管理员</a></li>
+        <li><a>关于</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(e) {
+  $("#time").flush(6000,function(e){
+	  var m=$.ajax({
+		   type: "GET",
+		   url: "{:U('control/time')}",
+		   async:false,
+		}).responseText;
+	  $("#time").html($eval(m));
+	  $("#time").attr('title','本地时间[对时]'+getYTime());
+  });
+  $("#m_btn").hover(function(e) {
+	  $("#m_btn").css("box-shadow","0px 0px 90px #CC0099 inset");
+	  
+	},function(e){
+		$("#m_btn").css("box-shadow","0px 0px 10px #CC0099 inset");
+	});
+  $(".menu").hover(function(e){
+	  $(".son1").css("display","block");
+	},function(e){
+		$(".son1").css("display","none");
+	})
+  $(".son1").delegate("li","click",function(e){
+	  $(".son1").css("display","none");
+	})
+});
+</script>
+<iframe id="page" name="main" allowtransparency="true" src="{:U('page/welcome')}"  frameborder="0" marginwidth="0" marginheight="0" scrolling="auto" ></iframe>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$msg}</title>
+<meta name="description" content=""/>
+<include file="./Tpl/head.html" />
+<style type="text/css">
+.msg {
+	position: relative;
+	margin: 200px;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: #CCC;
+	border:#FFF dashed 1px;
+	border-radius:4px;
+	text-align:center;
+	font-size:16px;
+	font-weight:bolder;
+}
+</style>
+</head>
+
+<body>
+<include file="./Tpl/nav_head.html" />
+<include file="./Tpl/site_head.html" />
+<div id="login_bar"></div>
+<div id="main">
+  <div class="msg">{$msg} </div>
+</div>
+<include file="./Tpl/footer.html" />
+</body>
+</html>

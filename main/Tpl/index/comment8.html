@@ -1,0 +1,57 @@
+<div id="comment"><!-- 最新评论 -->
+  <h1 class="line"><span class="title">最新选修课点评</span></h1>
+    <div class="cmtscontent">
+	<foreach name="result" item="vo">
+    <div class="cmtbox"> <a href="{$config['root']}home/user/{$vo.cmt_user_id}.do"><img src="{$vo.cmt_user_figure}" alt="{$vo.user_name}" /></a>
+      <ul>
+        <li class="score">
+          <span class="comment_span">评分:</span>
+          <div class="comment_star">
+          	<ul star="{$vo.cmt_score}"></ul>
+          </div>
+          <input type="hidden" notice="comment id" value="{$vo.cmt_id}"/>
+        </li>
+        <li class="firstchild" > <a href="{:U('/home/user/'.$vo['cmt_user_id'])}">{$vo.user_name}</a>
+          评论 <a class="course"  href="{$vo.class_url}" target="_self" >{$vo.class_name}</a> 说： </li>
+        <!--firstchild-->
+        <li >{$vo.cmt_content}</li>
+        <li class="time">时间：{$vo.cmt_time}</li>
+        <li> <a href="javascript:void(0);" target="_self" class="reply_comment">回应({$vo.reply_cmt_len})</a> <a href="#" target="_self" class="share_comment">分享至空间(0)</a>
+          <input type="hidden" value="{$vo.cmt_id}">
+        </li>
+        </ul>
+        <ul class="answer">
+        <li >
+		  <foreach name="vo.reply_cmt" item="item">
+          <ul class="item">
+            <li> <a href="{:U('/home/user/'.$item['rplcmt_user_id'])}">{$item.rpl_user_name}</a>
+              回应：
+              {$item.rplcmt_content}</li>
+            <li class="time">回应时间：{$item.rplcmt_time}<a class="at_comment" href="javascript:void(0);" content="@匿名用户(0)">回复</a></li>
+          </ul>
+		  </foreach>
+        </li>
+        <!--anwser-->
+        <li class="answer_form">
+          <ul>
+            <li>
+              <input type="hidden" value="{$vo.cmt_id}" />
+              <textarea cols="50" rows="7"></textarea>
+            </li>
+			<if condition="!$userid">
+			   <li class="auth_code"> <img src="{$verify}" alt="验证码"/> 请输入验证码
+              <input type="text" class="vCode_input" size="4">
+         </li>
+			</if>
+			      <li>
+              <button class="add_reply_comment">添加回复</button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+	</foreach>
+    <input type="hidden" id="login_type" value="0">
+    <p class="page" id="page_comment_index">{$tail}</p>
+  </div>
+</div>

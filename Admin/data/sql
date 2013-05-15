@@ -1,0 +1,2 @@
+'CREATE TABLE config(name text, value text)'
+'CREATE TABLE log(time int, value text)'

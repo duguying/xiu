@@ -1,0 +1,42 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.list_content {
+	position: relative;
+	width: 960px;
+	height: auto;
+	top: 0;
+	background-color:#CCC;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.clearfix {
+	display: inline-block;
+	list-style: none;
+	clear: both;
+	margin: 10px;
+	background-color: #FFF;
+	padding: 10px;
+	border-radius: 8px;
+}
+.group-name {
+	display: block !important;
+	position: relative;
+	color: #993300;
+	font-size: 15px;
+	font-weight: bolder;
+	width: 100% !important;
+}
+.clearfix>li {
+	display: inline-block;
+	float: left;
+	width: 253px;
+	margin-right: 53px;
+}
+.smethod {
+	position:relative;
+	width: 960px;
+	height: 50px;
+	background: #369;
+	top: 0;
+}
