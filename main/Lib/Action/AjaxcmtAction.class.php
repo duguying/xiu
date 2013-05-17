@@ -34,7 +34,7 @@ class AjaxcmtAction extends Action {
 		$this->assign('verify', U('tools/verify'));//验证码
 		$this->assign('userid',$this->userid);//用户id
 		
-		$this->display('./main/Tpl/index/comment_ajax.html');
+		$this->display();
 	}
 	/**
 	 * 获取当前分页的内容

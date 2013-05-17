@@ -1,4 +1,8 @@
 <?php
+/**
+ * Class ClspointAction
+ * 课程参数星级打分
+ */
 class ClspointAction extends Action{
 	public $prModel;
 	public $username;
@@ -95,10 +99,5 @@ class ClspointAction extends Action{
 			}
 		}
 	}
-	
-	function t() {
-		import('@.Yuol.showClsPoint');
-		$r=showClsPoint::GO(3, 2);
-		var_dump($r);
-	}
+
 }

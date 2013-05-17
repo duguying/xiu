@@ -68,10 +68,7 @@ class ClassdetailAction extends Action {
 		$this->assign('cls_point', $cls_point);
 // 		FFDEBUG($cls_point);
 // 		FFDEBUG($arr);
-		$this->display('./main/Tpl/classdetail/classdetail_frame.html');
+		$this->display();
 	}
-	
-	function test() {
-// 		echo U('/classdetail/detail/2');
-	}
+
 }

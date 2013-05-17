@@ -37,7 +37,7 @@ class AjaxcmtclsAction extends Action {
 		$this->assign('userid',$this->userid);//用户id
 		
 		
-		$this->display('./main/Tpl/index/comment_ajax.html');
+		$this->display();
 	}
 	/**
 	 * 获取当前分页的内容
@@ -72,10 +72,6 @@ class AjaxcmtclsAction extends Action {
 		}
 		return $pages;
 	}
-	
-	function test() {
-		import('@.Yuol.cmtTail');
-		echo(cmtTail::GO($_GET['p'], 40));
-	}
+
 }
 ?>

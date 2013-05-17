@@ -1,4 +1,4 @@
-﻿// JavaScript Document
+// JavaScript Document
 $(document).ready(function(e) {
     /**
      * 选项卡切换

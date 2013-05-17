@@ -1,4 +1,8 @@
 <?php
+/**
+ * Class TpcdetailAction
+ * 主题详情类，在弹出层显示，可回复主题
+ */
 class TpcdetailAction extends Action{
 	public $tpcModel;
 	public $tpcrplMpdel;

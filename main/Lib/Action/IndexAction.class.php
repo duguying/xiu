@@ -48,7 +48,7 @@ class IndexAction extends Action {
     	$this->assign('tk',talk::GET5(0));
 
     	
-    	$this->display("./main/Tpl/index/index_frame.html");//从入口文件开始
+    	$this->display("./main/Tpl/index/index.html");//从入口文件开始
     }
     /**
      * 公选课页面--所有课程
@@ -58,7 +58,7 @@ class IndexAction extends Action {
 		$this->assign('tagClass',$this->tagClass);
     	$this->assign('tagsUrl',$this->tagsUrl);
     	
-    	$this->display("./main/Tpl/allclass/allclass_frame.html");//从入口文件开始
+    	$this->display();//从入口文件开始
 	}
 	/**
 	 * 资料分享页面

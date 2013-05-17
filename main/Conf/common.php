@@ -1,52 +1,52 @@
 <?php
-$xiu_config=array(//Çë²»ÒªÐÞ¸Ä±äÁ¿Ãû$xiu_config
-		//'ÅäÖÃÏî'=>'ÅäÖÃÖµ'
+$xiu_config=array(//è¯·ä¸è¦ä¿®æ”¹å˜é‡å$xiu_config
+		//'é…ç½®é¡¹'=>'é…ç½®å€¼'
 		'SHOW_PAGE_TRACE' => true,
-		'SESSION_AUTO_START' =>false,//½ûÖ¹×Ô¶¯Æô¶¯session
-		'URL_HTML_SUFFIX'=>'do',//Ò³ÃæÎªpage.doÐÎÊ½
-		'URL_MODEL'          => '0', //URLÄ£Ê½
-		'ROOT_PATH'			=>getcwd().'/',//ÏîÄ¿¸ùÄ¿Â¼£¬±ØÐë¿ªÆô
-		'WWW_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']),//ÍøÕ¾¸ùÄ¿Â¼£¬±ØÐë¿ªÆô
-		'URL_CASE_INSENSITIVE' =>true,//¼æÈÝURLÐ¡Ð´£¬¿ªÆô
-		'LOAD_EXT_FILE'=>'myfunction,strfunction',//ÔØÈë×Ô¶¨Òåº¯Êý¿â£¬±ØÐë¿ªÆô
+		'SESSION_AUTO_START' =>false,//ç¦æ­¢è‡ªåŠ¨å¯åŠ¨session
+		'URL_HTML_SUFFIX'=>'do',//é¡µé¢ä¸ºpage.doå½¢å¼
+		'URL_MODEL'          => '3', //URLæ¨¡å¼
+		'ROOT_PATH'			=>getcwd().'/',//é¡¹ç›®æ ¹ç›®å½•ï¼Œå¿…é¡»å¼€å¯
+		'WWW_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']),//ç½‘ç«™æ ¹ç›®å½•ï¼Œå¿…é¡»å¼€å¯
+		'URL_CASE_INSENSITIVE' =>true,//å…¼å®¹URLå°å†™ï¼Œå¼€å¯
+		'LOAD_EXT_FILE'=>'myfunction,strfunction',//è½½å…¥è‡ªå®šä¹‰å‡½æ•°åº“ï¼Œå¿…é¡»å¼€å¯
 
-		'USER_SESSION_TIME'=>31536000,//»á»°±£´æÊ±¼ä, 1Äê
-		'SID_COOKIE_NAME'=>'xiu_sid',//sessionµÄcookieÃû
-		'AUTHOR'=>'LiJun(RexLee)',//AuthorÍ·ÐÅÏ¢
-		'X_POWERED'=>'RexLee@Yuol PHP Team',//X-Powered-byÍøÒ³Í·ÐÅÏ¢
-		'FFDEBUG'=>true,//¿ªÆôfirebugµ÷ÊÔ
-		//ÒÔÏÂÊÇÍøÕ¾¹«¹²ÓÊÏäÅäÖÃ
-		'SESSION_PATH'=>'./session/',//session±£´æÂ·¾¶
-		'MAIL_ADDRESS'=>'xiu_yuol@163.com', // ÓÊÏäµØÖ·
-		'MAIL_SMTP'=>'smtp.163.com', // ÓÊÏäSMTP·þÎñÆ÷
-		'MAIL_LOGINNAME'=>'xiu_yuol', // ÓÊÏäµÇÂ¼ÕÊºÅ
-		'MAIL_PASSWORD'=>'lijunxiu', // ÓÊÏäÃÜÂë
-		'MAIL_CHARSET'=>'UTF-8',//±àÂë
-		'MAIL_AUTH'=>true,//ÓÊÏäÈÏÖ¤
-		'MAIL_HTML'=>true,//true HTML¸ñÊ½ false TXT¸ñÊ½
+		'USER_SESSION_TIME'=>31536000,//ä¼šè¯ä¿å­˜æ—¶é—´, 1å¹´
+		'SID_COOKIE_NAME'=>'xiu_sid',//sessionçš„cookieå
+		'AUTHOR'=>'LiJun(RexLee)',//Authorå¤´ä¿¡æ¯
+		'X_POWERED'=>'RexLee@Yuol PHP Team',//X-Powered-byç½‘é¡µå¤´ä¿¡æ¯
+		'FFDEBUG'=>true,//å¼€å¯firebugè°ƒè¯•
+		//ä»¥ä¸‹æ˜¯ç½‘ç«™å…¬å…±é‚®ç®±é…ç½®
+		'SESSION_PATH'=>'./session/',//sessionä¿å­˜è·¯å¾„
+		'MAIL_ADDRESS'=>'xiu_yuol@163.com', // é‚®ç®±åœ°å€
+		'MAIL_SMTP'=>'smtp.163.com', // é‚®ç®±SMTPæœåŠ¡å™¨
+		'MAIL_LOGINNAME'=>'xiu_yuol', // é‚®ç®±ç™»å½•å¸å·
+		'MAIL_PASSWORD'=>'lijunxiu', // é‚®ç®±å¯†ç 
+		'MAIL_CHARSET'=>'UTF-8',//ç¼–ç 
+		'MAIL_AUTH'=>true,//é‚®ç®±è®¤è¯
+		'MAIL_HTML'=>true,//true HTMLæ ¼å¼ false TXTæ ¼å¼
 		//'DB_SQL_BUILD_CACHE' => true,
 		//'DB_SQL_BUILD_QUEUE' => 'File',
-		//'DB_SQL_BUILD_LENGTH' => 20, // SQL»º´æµÄ¶ÓÁÐ³¤¶È
+		//'DB_SQL_BUILD_LENGTH' => 20, // SQLç¼“å­˜çš„é˜Ÿåˆ—é•¿åº¦
 		//////////////
- 		//'MINIFY'=>true,//¿ªÆôÑ¹Ëõjs£¬css
+ 		//'MINIFY'=>true,//å¼€å¯åŽ‹ç¼©jsï¼Œcss
  		
-		//½«Ò»ÏÂ(TYPE)»»³ÉÄã¶ÔÓ¦µÄSDKÀàÐÍ
+		//å°†ä¸€ä¸‹(TYPE)æ¢æˆä½ å¯¹åº”çš„SDKç±»åž‹
 		'THINK_SDK_QQ' => array(
-				'APP_KEY'    => '100373443', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄ APP ID
-				'APP_SECRET' => 'f66c81f52e36f865c14e1100b9e77d58', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄKEY
-				'CALLBACK'   => 'www.duguying.tk/oc/qqcallback', //×¢²áÓ¦ÓÃÌîÐ´µÄcallback
+				'APP_KEY'    => '100373443', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„ APP ID
+				'APP_SECRET' => 'f66c81f52e36f865c14e1100b9e77d58', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„KEY
+				'CALLBACK'   => 'www.duguying.tk/oc/qqcallback', //æ³¨å†Œåº”ç”¨å¡«å†™çš„callback
 		),
 		
 		'THINK_SDK_RENREN' => array(
-				'APP_KEY'    => '7373b38a9fb94ad882cb332ed0247c7d', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄ APP ID
-				'APP_SECRET' => '18bc236007ad4396b1f20860d3f27fdb', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄKEY
-				'CALLBACK'   => 'www.duguying.tk', //×¢²áÓ¦ÓÃÌîÐ´µÄcallback
+				'APP_KEY'    => '7373b38a9fb94ad882cb332ed0247c7d', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„ APP ID
+				'APP_SECRET' => '18bc236007ad4396b1f20860d3f27fdb', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„KEY
+				'CALLBACK'   => 'www.duguying.tk', //æ³¨å†Œåº”ç”¨å¡«å†™çš„callback
 		),
 		
 		'THINK_SDK_DOUBAN' => array(
-				'APP_KEY'    => '074e3ac140b27ff615eab043c2177fe2', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄ APP ID
-				'APP_SECRET' => '7ded05883d3560a5', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄKEY
-				'CALLBACK'   => 'www.duguying.tk/oc/doubancallback', //×¢²áÓ¦ÓÃÌîÐ´µÄcallback
+				'APP_KEY'    => '074e3ac140b27ff615eab043c2177fe2', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„ APP ID
+				'APP_SECRET' => '7ded05883d3560a5', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„KEY
+				'CALLBACK'   => 'www.duguying.tk/oc/doubancallback', //æ³¨å†Œåº”ç”¨å¡«å†™çš„callback
 		),
 );
 if($xiu_config['SESSION_PATH']){

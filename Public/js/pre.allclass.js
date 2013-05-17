@@ -1,2 +1,2 @@
-﻿// JavaScript Document
+// JavaScript Document
 //preload for allclass page

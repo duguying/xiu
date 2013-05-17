@@ -1,4 +1,4 @@
-﻿// JavaScript Document
+// JavaScript Document
 // Author:李俊 长大在线
 // set point by star评论打分模块
 

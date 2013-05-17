@@ -49,6 +49,6 @@ class HomeAction extends Action {
 //     	FFDEBUG($userinfo);
     	$this->assign('userinfo', $userinfo);
     	
-    	$this->display('./main/Tpl/home/home_frame.html');
+    	$this->display();
 	}
 }
