@@ -54,7 +54,7 @@ class UserAction extends Action {
     	$this->assign('chk', $chk);
     	$this->assign('js_login_registor', mU('js/login.registor.js'));
 		
-    	$this->display("./main/Tpl/login/login_registor_frame.html");
+    	$this->display();
     	
 	}
 	/**
@@ -72,7 +72,7 @@ class UserAction extends Action {
 		}else {
 			$this->assign('msg', '注册失败，请认真检查注册项，正在转向主页……');
 		}
-		$this->display('./main/Tpl/login/registor_msg_frame.html');
+		$this->display();
 	}
 	/**
 	 * 登录响应页面

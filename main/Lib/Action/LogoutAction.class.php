@@ -1,4 +1,8 @@
 <?php
+/**
+ * Class LogoutAction
+ * 用户登出
+ */
 class LogoutAction extends Action {
 	
 	function __construct() {
