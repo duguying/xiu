@@ -5,10 +5,8 @@
 <meta name="page_config" classid="{$classarr[cls_id]}" userid="{$userid}" />
 <include file="./Tpl/head.html" />
 <meta name="page_config" fenye='ajaxcmtcls/page/{$classarr[cls_id]}/' />
-<php>
-$script['js_classdetail']=$config['root'].'Public/js/page.classdetail.js';
-$script['clsstar']=$config['root'].'Public/js/clsstar.js';
-</php>
+<script src="{$config['root']}Public/js/page.classdetail.js"></script>
+<script src="{$config['root']}Public/js/clsstar.js"></script>
 <link type="text/css" rel="stylesheet" href="{$config['root']}Public/css/classdetail.css"/>
 </head>
 
@@ -21,9 +19,7 @@ $script['clsstar']=$config['root'].'Public/js/clsstar.js';
   <include file="./main/Tpl/classdetail/detail/classdetail_right.html" />
 </div>
 <include file="./main/Tpl/classdetail/detail/classdetail_box.html" />
-<php>
-$script['cmtstar']=$config['root'].'Public/js/cmtstar.js';
-</php>
+<script src="{$config['root']}Public/js/cmtstar.js"></script>
 <include file="./Tpl/footer.html" />
 </body>
 </html>

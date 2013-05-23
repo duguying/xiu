@@ -5,7 +5,7 @@
  */
 class TpcdetailAction extends Action{
 	public $tpcModel;
-	public $tpcrplMpdel;
+	public $tpcrplModel;
 	public $usrname;
 	public $usrid;
 	public $usrnickname;
@@ -14,7 +14,7 @@ class TpcdetailAction extends Action{
 	
 	function __construct() {
 		$this->tpcModel=M('topic');
-		$this->tpcrplMpdel=M('reply_tpc');
+		$this->tpcrplModel=M('reply_tpc');
 		import('@.Yuol.autoLogin');
 		$this->usrname=autoLogin::PC();
 		$u=getData('user', array('usr_name'=>$this->usrname));
@@ -38,7 +38,7 @@ class TpcdetailAction extends Action{
 		unset($c);
 		import('@.Yuol.getFigure');
 		$resultArray['tpc_figure']=getFigure::GO((int)$resultArray['tpc_user_id']);//头像
-		$tmpArray=$this->tpcrplMpdel->where('rpltpc_topic_id='.$this->tpcid)->select();
+		$tmpArray=$this->tpcrplModel->where('rpltpc_topic_id='.$this->tpcid)->select();
 		$tmpCArray=array();
 		foreach ($tmpArray as $value) {
 			$u=getData('user', array('usr_id'=>$value['rpltpc_user_id']));
@@ -49,7 +49,7 @@ class TpcdetailAction extends Action{
 		}
 		$resultArray['tpc_rpl']=$tmpCArray;
 		$this->assign('tpc', $resultArray);
-		$this->display('./main/Tpl/topic/topic.html');
+		$this->display();
 	}
 	
 	function rpl() {
@@ -61,7 +61,7 @@ class TpcdetailAction extends Action{
 			$data['rpltpc_content']=$_POST['c'];//回复内容
 			$data['rpltpc_user_id']=$this->usrid;
 			$data['rpltpc_time']=time();
-			$result=$this->tpcrplMpdel->add($data);
+			$result=$this->tpcrplModel->add($data);
 			if(!$result){
 				echo json_encode(array('msg'=>'回复失败！'));
 			}else {
