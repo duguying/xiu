@@ -2,7 +2,7 @@
   <h1 class="line"><span class="title">最新选修课点评</span></h1>
     <div class="cmtscontent">
 	<foreach name="result" item="vo">
-    <div class="cmtbox"> <a href="{$config['root']}home/user/{$vo.cmt_user_id}.do"><img src="{$vo.cmt_user_figure}" alt="{$vo.user_name}" /></a>
+    <div class="cmtbox"> <a href="{:U('/home/user/'.$vo.cmt_user_id)}"><img src="{$vo.cmt_user_figure}" alt="{$vo.user_name}" /></a>
       <ul>
         <li class="score">
           <span class="comment_span">评分:</span>

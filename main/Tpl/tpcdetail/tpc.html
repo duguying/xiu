@@ -108,9 +108,9 @@ $(document).ready(function(e) {
 </head>
 
 <body>
-<div class="cmtbox"> <a target="blank" href="<php>echo U('/home/user/'.$tpc['tpc_user_id'])</php>"><img src="{$tpc.tpc_figure}" alt="{$tpc.tpc_nickname}" /></a>
+<div class="cmtbox"> <a target="blank" href="{:U('/home/user/'.$tpc['tpc_user_id'])}"><img src="{$tpc.tpc_figure}" alt="{$tpc.tpc_nickname}" /></a>
   <ul>
-    <li class="headline">{$tpc.tpc_title}<a  class="person" href="/aixuanxiu/home/user/4.do" target="blank" title="{$tpc.tpc_nickname}">[{$tpc.tpc_nickname}]</a> </li>
+    <li class="headline">{$tpc.tpc_title}<a  class="person" href="{:U('/home/user/'.$tpc['tpc_user_id'])}" target="blank" title="{$tpc.tpc_nickname}">[{$tpc.tpc_nickname}]</a> </li>
     <li class="tpc_content">{$tpc.tpc_content}</li>
     <li class="light">来自：<a class="light" target="blank" href="<php>echo U('/classdetail/detail/'.$tpc['tpc_class_id']);</php>" target="_self" >{$tpc.tpc_class_name}</a></li>
     <li class="light">时间：{$tpc.time}</li>
