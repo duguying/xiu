@@ -49,7 +49,11 @@ $xiu_config=array(//请不要修改变量名$xiu_config
 				'CALLBACK'   => 'www.duguying.tk/oc/doubancallback', //注册应用填写的callback
 		),
 );
+
 if($xiu_config['SESSION_PATH']){
+	if (!is_dir($xiu_config['SESSION_PATH'])) {
+		mkdir($xiu_config['SESSION_PATH']);//如果目录不存在，创建目录
+	}
 	session_save_path($xiu_config['SESSION_PATH']);
 }
 

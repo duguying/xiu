@@ -23,9 +23,10 @@ class TkAction extends Action{
 	function ls() {
 		$tk=talk::GET5($_GET['t']);
 		cookie('tk', time());
+		dump($tk);
 		if($tk){
 			$this->assign('tk', $tk);
-			$this->display('./main/Tpl/index/talk_all.html');
+			$this->display();
 		}
 	}
 	/**
@@ -35,10 +36,10 @@ class TkAction extends Action{
 		try {
 			$result=talk::ADD($_POST['c']);
 			if($result){
-				echo 'true';
+				$this->ajaxReturn(true);
 			}
 		} catch (Exception $e) {
-			echo 'false';
+			$this->ajaxReturn(false);
 		}
 	}
 	/**

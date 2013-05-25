@@ -20,9 +20,9 @@ class UserAction extends Action {
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());
 		
-		$this->assign('js_jqui', mU('js/jquery-ui-1.10.0.custom.min.js'));
-		$this->assign('js_login', mU('js/login.js'));
-		$this->assign('css_style', mU('css/style.css'));
+// 		$this->assign('js_jqui', mU('js/jquery-ui-1.10.0.custom.min.js'));
+// 		$this->assign('js_login', mU('js/login.js'));
+// 		$this->assign('css_style', mU('css/style.css'));
 		
 		import('@.Yuol.autoLogin');
 		$this->user_name=autoLogin::PC();
@@ -89,18 +89,18 @@ class UserAction extends Action {
 		import('@.Yuol.loginChk');
 		$result=loginChk::GO($username, $password);
 		dump($result);
-		header("Location:".$_SERVER['HTTP_REFERER']);//登录成功，重定向跳转到主页
+// 		header("Location:".$_SERVER['HTTP_REFERER']);//登录成功，重定向跳转到主页
 	}
 	
 	/**
 	 * 测试页面
 	 */
-	public function test() {
+// 	public function test() {
 // 		var_dump($_COOKIE);
 // 		echo session_id('cdmfsrvqv9ivu414ofqri3aje5'),"<br/>";
 // 		session_start();
 // 		echo session_id();
 // 		var_dump($_SESSION['username']);
-	}
+// 	}
 	
 }

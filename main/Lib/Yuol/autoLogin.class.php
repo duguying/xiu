@@ -36,7 +36,7 @@ class autoLogin{
 	function getInfo() {
 		$username=$_SESSION['username'];
 		if (!$username) {
-			cookie('xiu_sid', null);
+			cookie('xiu_sid', null);//TODO
 			session_destroy();
 		}else {
 			$this->username=$_SESSION['username'];
