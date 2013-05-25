@@ -89,18 +89,7 @@ class UserAction extends Action {
 		import('@.Yuol.loginChk');
 		$result=loginChk::GO($username, $password);
 		dump($result);
-// 		header("Location:".$_SERVER['HTTP_REFERER']);//登录成功，重定向跳转到主页
+		header("Location:".$_SERVER['HTTP_REFERER']);//登录成功，重定向跳转到主页
 	}
-	
-	/**
-	 * 测试页面
-	 */
-// 	public function test() {
-// 		var_dump($_COOKIE);
-// 		echo session_id('cdmfsrvqv9ivu414ofqri3aje5'),"<br/>";
-// 		session_start();
-// 		echo session_id();
-// 		var_dump($_SESSION['username']);
-// 	}
 	
 }

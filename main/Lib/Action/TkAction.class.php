@@ -23,7 +23,7 @@ class TkAction extends Action{
 	function ls() {
 		$tk=talk::GET5($_GET['t']);
 		cookie('tk', time());
-		dump($tk);
+// 		dump($tk);
 		if($tk){
 			$this->assign('tk', $tk);
 			$this->display();
