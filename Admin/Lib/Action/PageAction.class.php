@@ -7,7 +7,7 @@ class PageAction extends Action {
 		$this->assign('config', $config);
 	}
 	function welcome(){
-// 		$this->assign()
+// 		$this->assign();
 		$this->display('./Admin/Tpl/welcome.html');
 	}
 	
