@@ -31,6 +31,6 @@ class IndexAction extends Action {
 		}
 	}
 	public function test1() {
-		var_dump(ls('/'));
+		echo md5("lijun");
 	}
 }

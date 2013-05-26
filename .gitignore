@@ -6,3 +6,5 @@ ThinkPHP/
 session/
 /.buildpath
 /.project
+data/
+/SAP
