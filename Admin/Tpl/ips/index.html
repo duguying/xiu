@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>禁用IP列表</title>
+	<script src="{$root}Public/js/jquery-1.8.3.js"></script>
+	<link rel="stylesheet" href="{$tpl}_css_/admin.css">
+</head>
+<body>
+	<center>禁止管理员登录IP域</center>
+	<hr>
+	<ul class="list_head">
+		<li class="li_id">ID</li>
+		<li class="li_ip">IP域</li>
+		<li class="li_cmt">备注</li>
+		<li><input type="checkbox" name="" id="all" title="全选"></li>
+	</ul>
+<div class="list_box">
+	<foreach name="iplist" item="vo">
+		<ul class="list">
+			<li class="li_id pointer">{$vo.id}</li>
+			<li class="li_ip pointer">{$vo.ips}</li>
+			<li class="li_cmt">{$vo.comment}</li>
+			<li><input type="checkbox" name="ip_id" id="{$vo.id}"></li>
+		</ul>
+	</foreach>
+</div>
+<hr>
+将选中记录
+<select name="" id="">
+	<option value="">删除</option>
+	<option value="">ddd</option>
+</select>
+<button>确认</button><br><br><hr>
+添加记录：<br>
+<form action="">
+	<label for="">IP域</label><input type="text" name="ips" id=""><br>
+	<label for="">备注</label><br><textarea style="resize:none;" name="cmt" id="" cols="30" rows="10"></textarea><br>
+	<input type="submit" value="添加">
+</form>
+<hr><br><br>
+</body>
+</html>
+<script src="{$tpl}_js_/admin_style.js"></script>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>用户管理</title>
+	<script src="{$root}Public/js/jquery-1.8.3.js"></script>
+	<link rel="stylesheet" href="{$tpl}_css_/admin.css">
+</head>
+<body>
+	<center>禁止管理员登录IP域</center>
+	<hr>
+	<ul class="list_head">
+		<li class="li_id">ID</li>
+		<li class="li_username">用户名</li>
+		<li class="li_nickname">昵称</li>
+		<li class="li_email">Email</li>
+		<li class="li_score">积分</li>
+		<li class="li_ip">注册IP</li>
+		<li class="li_time">注册时间</li>
+		<li class="li_ip">最后IP</li>
+		<li class="li_time">最后时间</li>
+		<li><input type="checkbox" name="" id="all" title="全选"></li>
+	</ul>
+<div class="list_box">
+	<foreach name="user" item="vo">
+		<ul class="list">
+			<li class="li_id pointer">{$vo.usr_id}</li>
+			<li class="li_username pointer">{$vo.usr_name}</li>
+			<li class="li_nickname">{$vo.usr_nickname}</li>
+			<li class="li_email">{$vo.usr_mail}</li>
+			<li class="li_score">{$vo.usr_active_score}</li>
+			<li class="li_ip">{$vo.usr_reg_ip}</li>
+			<li class="li_time">{$vo.usr_reg_time}</li>
+			<li class="li_ip">{$vo.usr_last_ip}</li>
+			<li class="li_time">{$vo.usr_last_time}</li>
+			<li><input type="checkbox" name="ip_id" id="{$vo.id}"></li>
+		</ul>
+	</foreach>
+
+</div>
+<hr>
+<li style="width:100%;">
+	<input type="text" name="page" id="" style="width:50px;">总[XXX]页
+	<button>跳</button><button>下一页</button>
+</li>
+<br><br>
+<hr>
+将选中用户
+<select name="" id="">
+	<option value="">解封</option>
+	<option value="">封号</option>
+	<option value="">封号1小时</option>
+	<option value="">封号1天</option>
+	<option value="">封号1周</option>
+	<option value="">封号1月</option>
+	<option value="">封号1年</option>
+</select>
+<button>确认</button><br><br><hr>
+查找用户<br>
+<li>
+	<label for="">ID</label><input type="text" name="" id="">
+</li>
+<li>
+	<label for="">用户名</label><input type="text" name="" id="">
+</li>
+<li>
+	<label for="">昵称</label><input type="text" name="" id="">
+</li>
+<li>
+	<label for="">Email</label><input type="text" name="" id="">
+</li>
+<li>
+	<label for="">性别</label>
+	<input type="radio" name="sex" id="">男<input type="radio" name="sex" id="">女
+</li><br>
+<button>查找</button><br><br>
+<hr><br><br>
+</body>
+</html>
+<script src="{$tpl}_js_/admin_style.js"></script>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>管理员管理</title>
+	<script src="{$root}Public/js/jquery-1.8.3.js"></script>
+	<link rel="stylesheet" href="{$tpl}_css_/admin.css">
+</head>
+<body>
+	<center>管理员管理</center>
+	<hr>
+	<ul class="list_head">
+		<li class="li_id">ID</li>
+		<li class="li_username">用户名</li>
+		<li class="li_nickname">昵称</li>
+		<li class="li_grade">管理员等级</li>
+		<li class="li_regtime">注册时间</li>
+		<li class="li_lasttime">最后活跃时间</li>
+		<li><input type="checkbox" name="" id="all" title="全选"></li>
+	</ul>
+	<div class="list_box">
+		<foreach name="admin" item="vo">
+			<ul class="list">
+				<li class="li_id">{$vo.id}</li>
+				<li class="li_username">{$vo.username}</li>
+				<li class="li_nickname">{$vo.nickname}</li>
+				<li class="li_grade">{$vo.grade}</li>
+				<li class="li_regtime">{$vo.regtime}</li>
+				<li class="li_lasttime">{$vo.lasttime}</li>
+				<li><input type="checkbox" name="admin_user" id=""></li>
+			</ul>	    
+		</foreach>
+	</div>
+	<hr>
+	将选中记录
+	<select name="" id="">
+		<option value="">删除</option>
+		<option value="">ddd</option>
+	</select>
+	<button>确认</button><br><br><hr>
+	添加管理员：<br>
+	<form action="{:U('admin/add')}" method="POST">
+		<li>
+			<label for="">用户名</label><input type="text" name="username" id="">
+		</li>
+		<li>
+			<label for="">密码</label><input type="password" name="password" id="">
+		</li>
+		<li>
+			<label for="">确认密码</label><input type="password" name="" id="retype">
+		</li>
+		<li>
+			<label for="">昵称</label><input type="text" name="nickname" id="">
+		</li>
+		<li>
+			<label for="">等级</label>
+			<select name="grade" id="">
+				<option value="g1">1</option>
+				<option value="g2">2</option>
+			</select>
+		</li>
+		<input type="submit" value="添加">
+	</form>
+	<hr>
+	<a href="{:U('ips/index')}">管理员IP限制</a>
+</body>
+</html>
+<script src="{$tpl}_js_/admin_style.js"></script>

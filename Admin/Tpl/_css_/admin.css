@@ -1,0 +1,78 @@
+/*
+* rex lee created in 14:33 7/29 2013;
+*/
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+ul{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+li{
+	list-style: none;
+	float: left;
+	border: 1px solid white;
+}
+.list_head{
+	font-weight: bolder;
+	background-color: #f4f6a2;
+	height: 19px;
+    overflow-x: hidden;
+}
+.list_head li{
+	
+}
+.list_box{
+	overflow-y: scroll;
+	height: 200px;
+}
+.list{
+	/*color: #eb56a3;*/
+}
+
+.li_score{
+	width: 30px;
+}
+.li_id{
+	width: 40px;
+}
+.li_ip,.li_email{
+	width: 150px;
+}
+.li_cmt{
+	width: 250px;
+}
+.li_username,.li_nickname{
+	width: 100px;
+}
+.li_grade{
+	width: 90px;
+}
+.li_regtime,.li_lasttime,.li_time{
+	width: 170px;
+}
+.pointer{
+	cursor: pointer;
+}
+.list_odd{
+	background-color:#bdecff;
+}
+.list_hover{
+	color: white;
+	background-color: gray;
+}
+form li{
+	display: inline-block;
+	width: 100%;
+}
+form li *{
+	float: left;
+}
+label{
+	display: block;
+	width: 80px;
+}
