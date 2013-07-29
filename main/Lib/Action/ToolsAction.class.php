@@ -14,7 +14,8 @@ class ToolsAction extends Action {
 		if (!$this->username) {//用户登录了，则验证码不写session，即验证码无效
 			session('[start]');
 		}
-	    import('@.ORG.Util.Image');
+		session("verifyTime",time());//记下验证码生成的时间
+	    import('ORG.Util.Image');
     	Image::buildImageVerify();
 	}
 	/**
@@ -24,6 +25,7 @@ class ToolsAction extends Action {
 		if (!$this->username) {
 			session('[start]');
 		}
+		session("verifyTime",time());//记下验证码生成的时间
 	    import('ORG.Util.Image');
     	Image::GBVerify(4,'png',100,50,'./Public/font/msyh.ttf');
 	}

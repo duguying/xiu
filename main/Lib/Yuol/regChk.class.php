@@ -34,7 +34,7 @@ class regChk{
 		if($_SESSION['verify'] != md5($yanz)) {
 			FFDEBUG('验证码错误！');
 			return false;
-		}elseif (time()-(int)$_SESSION['verifyTime'] > 300){//5分钟超时
+		}elseif (time()-(int)$_SESSION['verifyTime'] > 3000*5){//5分钟超时
 			FFDEBUG('验证码超时！');
 			return false;
 		}else{

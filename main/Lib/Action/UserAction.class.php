@@ -68,9 +68,9 @@ class UserAction extends Action {
 		if (regChk::GO($_POST)) {
 			import('@.Yuol.regStore');
 			regStore::GO($_POST);
-			$this->assign('msg', '注册成功，正在转向主页……');
+			$this->assign('msg', '注册成功，正在转向主页……<script>window.setTimeout(function(){window.location.href="'.C("WWW_PATH").'";},3000);</script>');
 		}else {
-			$this->assign('msg', '注册失败，请认真检查注册项，正在转向主页……');
+			$this->assign('msg', '注册失败，请认真检查注册项，正在转向主页……<script>window.setTimeout(function(){window.location.href="'.C("WWW_PATH").'";},3000);</script>');
 		}
 		$this->display();
 	}
