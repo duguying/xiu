@@ -13,7 +13,7 @@ class ControlAction extends Action{
 	}
 	function index(){
 		$this->assign('ip', get_client_ip());
-		$this->display('./Admin/Tpl/index.frame.html');
+		$this->display();
 	}
 	function logout(){
 		session_destroy();

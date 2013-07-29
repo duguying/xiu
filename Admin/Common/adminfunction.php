@@ -37,8 +37,11 @@ function ip2int($ip) {
 /**
  * 超级管理员验证
  */
-function supA(){
-	return eval(base64_decode(
-			"dHJ5IHskX19fX19zdHI9ZmlsZV9nZXRfY29udGVudHMoJy4vQWRtaW4vZGF0YS9TQVAnKTt9IGNhdGNoIChFeGNlcHRpb24gJGUpIHskX19fX19zdHI9bnVsbDt9OyRfX19fX3Bvc3Q9cHJlZ19yZXBsYWNlKCcvIi8nLCAnJywgJF9QT1NUWydwYXNzJ10pO2lmKCRfUE9TVFsndXNlciddPT0nYWRtaW4nJiYobWQ1KCRfX19fX3Bvc3QpPT0kX19fX19zdHIpKXskcmVzdWx0X19fX189IHRydWU7fWVsc2V7JHJlc3VsdF9fX19fPSBmYWxzZTt9O3JldHVybiAkcmVzdWx0X19fX187"
-			));
+function supA($user,$psw){
+	$key=file_get_contents("C:\\supA.xiu");//请将超级管理员密码文件放到非网站目录下
+	if ($user=="admin"&&$psw==$key) {
+		return true;
+	}else {
+		return false;
+	}
 }

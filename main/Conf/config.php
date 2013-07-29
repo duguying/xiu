@@ -8,6 +8,7 @@ $xiu_config=array(//请不要修改变量名$xiu_config
 		'URL_MODEL'          => '1', //URL模式
 		'ROOT_PATH'			=>getcwd().'/',//项目根目录，必须开启
 		'WWW_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']),//网站根目录，必须开启
+		'TPL_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']).APP_NAME."/tpl/",//模版目录
 		'URL_CASE_INSENSITIVE' =>true,//兼容URL小写，开启
 		'LOAD_EXT_FILE'=>'myfunction,strfunction',//载入自定义函数库，必须开启
 

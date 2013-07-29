@@ -6,6 +6,7 @@ return array(
 		'LOAD_EXT_FILE'=>'myfunction,adminfunction',//载入自定义函数库
 		'ROOT_PATH'			=>getcwd().'/',
 		'WWW_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']),
+		'TPL_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']).APP_NAME."/tpl/",
 		'FFDEBUG'=>true,//开启firebug调试
 		'URL_CASE_INSENSITIVE' =>true,//兼容URL小写
 		'DB'		=>'./Admin/data/file.php',//管理后台数据文件
