@@ -5,8 +5,8 @@
 	
 	
 	<foreach name="result" item="vo">
-
-    <div class="cmtbox"> <a href="{$root}home/user/{$vo.cmt_user_id}.do"><img src="{$vo.cmt_user_figure}" alt="{$vo.user_name}" /></a>
+<!-- {:var_dump($vo["cmt_user_id"])} -->
+    <div class="cmtbox"> <a href="{:U('/home/user/'.$vo['cmt_user_id'])}"><img src="{$vo.cmt_user_figure}" alt="{$vo.user_name}" /></a>
       <ul>
         <li class="score">
           <span class="comment_span">评分:</span>
@@ -15,7 +15,7 @@
           </div>
           <input type="hidden" notice="comment id" value="{$vo.cmt_id}"/>
         </li>
-        <li class="firstchild" > <a href="{$config['root']}home/user/{$vo.cmt_user_id}.do">{$vo.user_name}</a>
+        <li class="firstchild" > <a href="{:U('/home/user/'.$vo['cmt_user_id'])}">{$vo.user_name}</a>
           评论 <a class="course"  href="{$vo.class_url}" target="_self" >{$vo.class_name}</a> 说： </li>
         <!--firstchild-->
         <li >{$vo.cmt_content}</li>
