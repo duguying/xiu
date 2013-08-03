@@ -2,6 +2,7 @@
 $xiu_config=array(//请不要修改变量名$xiu_config
 		
 				//'配置项'=>'配置值'
+		'TEMP_STRIP_SPACE'=>true,
 		'SHOW_PAGE_TRACE' => true,
 		'SESSION_AUTO_START' =>false,//禁止自动启动session
 		'URL_HTML_SUFFIX'=>'do',//页面为page.do形式

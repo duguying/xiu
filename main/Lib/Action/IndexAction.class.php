@@ -5,8 +5,7 @@ class IndexAction extends Action {
 	public $username;
 	public $user_id;
 	
-	public function __construct(){
-		parent::__construct();
+	public function _initialize(){
 // 		chkUpdate();
 		cookie('tk', time());
 		import('@.Yuol.conf');
@@ -48,7 +47,7 @@ class IndexAction extends Action {
     	$this->assign('tk',talk::GET5(0));
 
     	
-    	$this->display("./main/Tpl/index/index.html");//从入口文件开始
+    	$this->display();//从入口文件开始
     }
     /**
      * 公选课页面--所有课程
@@ -68,14 +67,9 @@ class IndexAction extends Action {
 		$this->assign('tagClass',$this->tagClass);
 		$this->assign('tagsUrl',$this->tagsUrl);
 		
-		$this->display('./main/Tpl/ziliao/ziliao_frame.html');
+		$this->display();
 	}
 	
-	public function test() {
-		echo '<a href="'.U('oc/qqlogin').'">QQ</a><br/>';
-		echo '<a href="'.U('oc/renrenlogin').'">人人</a><br/>';
-		echo '<a href="'.U('oc/doubanlogin').'">豆瓣</a><br/>';
-		echo U('hihi/jiji');
-	}
+
 	
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>资料分享|爱选修</title>
+
+<meta name="description" content="">
+<include file="./Tpl/head.html" />
+<!--<script type="text/javascript" src="{$config['root']}Public/js/pre.ziliao.js"></script>-->
+<!--<script type="text/javascript" src="{$js_ziliao}"></script>-->
+<script type="text/javascript" src="{$config['root']}Public/js/ziliao.listall.js"></script>
+<link pziliao rel="stylesheet" href="{$config['root']}Public/css/ziliao.css"/>
+</head>
+
+<body>
+<include file="./Tpl/nav_head.html" />
+<include file="./Tpl/site_head.html" />
+<include file="./Tpl/login_bar.html" />
+<div id="main">
+  <include file="./main/Tpl/index/ziliao/listall_left.html" />
+  <div id="right">
+    <div id="uploads"> <a>分享我的文档</a> </div>
+    <div id="box">
+		<include file="./main/Tpl/index/ziliao/listall_right_hottest.html" />
+		<include file="./main/Tpl/index/ziliao/listall_right_gxrank.html" />
+    </div>
+  </div>
+</div>
+<include file="./Tpl/footer.html" />
+</body>
+</html>
