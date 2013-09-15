@@ -2,6 +2,7 @@ Runtime/
 Uploads/
 .idea/
 ThinkPHP/
+ThinkPHP3.1.3_Core/
 .settings/
 session/
 /.buildpath
