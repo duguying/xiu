@@ -6,7 +6,7 @@
  */
 class ChkAction extends Action{
 	public $username=null;
-	function __construct() {
+	function _initialize() {
 		import('@.Yuol.autoLogin');
 		$this->username=autoLogin::PC();
 	}

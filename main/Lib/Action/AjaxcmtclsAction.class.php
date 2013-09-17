@@ -9,7 +9,7 @@ class AjaxcmtclsAction extends Action {
 	public $userid;
 	public $cls_id;
 	
-	function __construct(){
+	function _initialize(){
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());
 		import('@.Yuol.autoLogin');

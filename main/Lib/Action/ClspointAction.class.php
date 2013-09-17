@@ -8,7 +8,7 @@ class ClspointAction extends Action{
 	public $username;
 	public $userid;
 	
-	function __construct() {
+	function _initialize() {
 		$this->prModel=M('point_record');
 		import('@.Yuol.autoLogin');
 		$this->username=autoLogin::PC();

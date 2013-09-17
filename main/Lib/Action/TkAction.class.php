@@ -7,7 +7,7 @@
 class TkAction extends Action{
 	public $talkModel;
 	
-	function __construct() {
+	function _initialize() {
 		import('@.Yuol.talk');
 		$this->talkModel=M('talk');
 	}

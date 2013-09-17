@@ -7,7 +7,7 @@ class AjaxcmtrplAction extends Action {
 	public $username;
 	public $nickname;
 	
-	function __construct() {
+	function _initialize() {
 		import('@.Yuol.autoLogin');
 		$this->username=autoLogin::PC();
 		$user=getData('user',array('usr_name'=>$this->username));//TODO

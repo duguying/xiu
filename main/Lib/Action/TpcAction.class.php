@@ -22,7 +22,7 @@ class TpcAction extends Action{
 	public $username;
 	
 	
-	function __construct() {
+	function _initialize() {
 		$this->topicModel=M('topic');
 		$this->rplcmtModel=M('reply_tpc');
 		import('@.Yuol.autoLogin');

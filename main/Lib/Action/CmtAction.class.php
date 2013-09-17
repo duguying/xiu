@@ -22,7 +22,7 @@ class CmtAction extends Action{
 	public $username;
 	
 	
-	function __construct() {
+	function _initialize() {
 		$this->commentModel=M('comment');
 		$this->rplcmtModel=M('reply_cmt');
 		import('@.Yuol.autoLogin');

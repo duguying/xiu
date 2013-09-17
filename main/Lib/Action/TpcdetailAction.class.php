@@ -12,7 +12,7 @@ class TpcdetailAction extends Action{
 	public $tpcid;
 	
 	
-	function __construct() {
+	function _initialize() {
 		$this->tpcModel=M('topic');
 		$this->tpcrplModel=M('reply_tpc');
 		import('@.Yuol.autoLogin');

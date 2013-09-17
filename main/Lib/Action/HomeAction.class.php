@@ -11,8 +11,8 @@ class HomeAction extends Action {
 	public $user_id;
 	
 	
-	public function __construct(){
-		parent::__construct();
+	public function _initialize(){
+		//parent::__construct();
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());
 		

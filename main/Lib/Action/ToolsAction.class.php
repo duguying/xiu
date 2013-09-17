@@ -2,7 +2,7 @@
 class ToolsAction extends Action {
 	public $username=null;
 	
-	public function __construct(){
+	public function _initialize(){
 		import('@.Yuol.autoLogin');
 		$this->username=autoLogin::PC();
 	}

@@ -10,7 +10,7 @@ class ClassdetailAction extends Action {
 	 */
 	public $classid;//课程id
 	
-	public function __construct() {
+	public function _initialize() {
 		chkUpdate();
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());

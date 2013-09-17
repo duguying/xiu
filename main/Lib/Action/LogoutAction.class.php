@@ -5,7 +5,7 @@
  */
 class LogoutAction extends Action {
 	
-	function __construct() {
+	function _initialize() {
 		chkUpdate();
 	}
 	/**
