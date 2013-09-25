@@ -23,6 +23,7 @@ class CmtAction extends Action{
 	
 	
 	function _initialize() {
+		chkBrowser();
 		$this->commentModel=M('comment');
 		$this->rplcmtModel=M('reply_cmt');
 		import('@.Yuol.autoLogin');

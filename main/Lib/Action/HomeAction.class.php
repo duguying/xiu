@@ -12,7 +12,7 @@ class HomeAction extends Action {
 	
 	
 	public function _initialize(){
-		//parent::__construct();
+		chkBrowser();
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());
 		

@@ -70,7 +70,7 @@ function hostOnly() {
 /**
  * 阻止低版本IE，提醒其升级
  */
-function chkUpdate() {
+function chkBrowser() {
 	if (isOldIE()) {
 		header('Location: http://www.google.cn/intl/zh-CN/chrome/browser/?hl=zh-CN&brand=CHMI');
 	}

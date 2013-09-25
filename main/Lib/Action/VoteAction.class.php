@@ -8,7 +8,6 @@ class VoteAction extends Action {
 	public $username;
 	
 	function _initialize() {
-	//	parent::__construct();
 		
 		import('@.Yuol.autoLogin');
 		$this->username=autoLogin::PC();

@@ -1,11 +1,24 @@
+# Thinkphp
 Runtime/
 Uploads/
-.idea/
 ThinkPHP/
 ThinkPHP3.1.3_Core/
-.settings/
+
+# Project
 session/
-/.buildpath
-/.project
+
+# Admin
 data/
 /SAP
+
+# Sublime
+.idea/
+
+# Eclipse
+.settings/
+/.buildpath
+/.project
+
+# Vim
+*~
+*.swp

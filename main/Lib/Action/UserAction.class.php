@@ -15,8 +15,7 @@ class UserAction extends Action {
 	public $userState;//登录状态True表示在线，False表示离线
 	
 	public function _initialize(){
-		//parent::__construct();
-		chkUpdate();
+		chkBrowser();
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());
 		

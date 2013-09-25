@@ -23,6 +23,7 @@ class TpcAction extends Action{
 	
 	
 	function _initialize() {
+		chkBrowser();
 		$this->topicModel=M('topic');
 		$this->rplcmtModel=M('reply_tpc');
 		import('@.Yuol.autoLogin');

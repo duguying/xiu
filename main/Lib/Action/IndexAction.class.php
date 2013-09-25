@@ -6,7 +6,7 @@ class IndexAction extends Action {
 	public $user_id;
 	
 	public function _initialize(){
-// 		chkUpdate();
+ 		chkBrowser();
 		cookie('tk', time());
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());

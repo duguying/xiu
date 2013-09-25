@@ -6,7 +6,7 @@
 class LogoutAction extends Action {
 	
 	function _initialize() {
-		chkUpdate();
+		chkBrowser();
 	}
 	/**
 	 * 登出功能

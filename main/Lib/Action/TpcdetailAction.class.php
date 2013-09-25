@@ -13,6 +13,7 @@ class TpcdetailAction extends Action{
 	
 	
 	function _initialize() {
+		chkBrowser();
 		$this->tpcModel=M('topic');
 		$this->tpcrplModel=M('reply_tpc');
 		import('@.Yuol.autoLogin');

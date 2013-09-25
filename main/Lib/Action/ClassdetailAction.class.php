@@ -11,7 +11,7 @@ class ClassdetailAction extends Action {
 	public $classid;//课程id
 	
 	public function _initialize() {
-		chkUpdate();
+		chkBrowser();
 		import('@.Yuol.conf');
 		$this->assign('config', conf::GO());
 		
