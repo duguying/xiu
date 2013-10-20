@@ -1,7 +1,7 @@
 <?php
 class PageAction extends Action {
 	///aixuanxiu/admin.php/p/test
-	function __construct() {
+	function _initialize() {
 		import('@.admin.conf');
 		$config=conf::COMM();
 		$this->assign('config', $config);

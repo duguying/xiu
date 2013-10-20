@@ -156,7 +156,7 @@ function jalert(c) {
 	function get() {
 		var cdata = $.ajax({
 				type : "get",
-				url : a + "Public/rs/alert_box.rs",
+				url : a + "Public/rs/alert_box.res",
 				data : "",
 				dataType : "text",
 				async : false,

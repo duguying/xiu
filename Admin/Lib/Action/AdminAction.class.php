@@ -7,7 +7,7 @@ class AdminAction extends Action{
 	public $adminModel;
 	function _initialize() {
 		import("@.admin.AdminLib");
-		$this->adminModel=M("admin");
+		$this->adminModel=M("user");
 		$this->assign("root",C("WWW_PATH"));
 		$this->assign("tpl",C("TPL_PATH"));
 	}

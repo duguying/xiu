@@ -6,7 +6,7 @@
  */
 class ControlAction extends Action{
 	
-	function __construct() {
+	function _initialize() {
 		import('@.admin.conf');
 		$config=conf::CONTROL();
 		$this->assign('config', $config);

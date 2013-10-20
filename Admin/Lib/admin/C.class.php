@@ -1,15 +1,9 @@
 <?php
 class C {//TODO
 	public $db;
-	function __construct() {
+	function _initialize() {
 		$this->ip = get_client_ip();
-		import('@.admin.Sqlite');
-		$this->db=Sqlite::GO(C('DB'));//把数据库后缀人为地改成php
-		$num=$this->db->query("SELECT count(*) as num FROM sqlite_master WHERE type='table' AND name='config'");//check whether the table exist
-		$num=$num[0]['num'];
-		if(!$num){//if not exist, create it
-			$this->db->query('CREATE TABLE config (name varchar(20), value varchar(512))');
-		}
+		$this->db=M('config');
 	}
 	/**
 	 * 设定配置值
@@ -20,8 +14,10 @@ class C {//TODO
 	function set($name, $value) {
 		$value=json_encode($value);
 		$value=base64_encode($value);
-		$this->db->query('DELETE FROM config WHERE name = "'.$name.'"');
-		$result=$this->db->query('INSERT INTO config(name, value) values("'.$name.'", \''.$value.'\')');
+		$this->db->where(array('name'=>$name))->delete();
+		$data['name']=$name; 
+		$data['value']=$value;
+		$result=$this->db->add($data);
 		return $result;
 	}
 	/**
@@ -30,8 +26,8 @@ class C {//TODO
 	 * @return mixed 从json解析而来
 	 */
 	function get($name) {
-		$result=$this->db->query('select value from config where name="'.$name.'"');
-		return json_decode(base64_decode(($result[0]['value'])));
+		$result=$this->db->where(array('name'=>$name))->find();
+		return json_decode(base64_decode(($result['value'])));
 	}
 	/**
 	 * 设置

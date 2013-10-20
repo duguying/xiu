@@ -3,7 +3,7 @@
  * AdminAction使用的预处理库
  */
 class AdminLib{
-	function __construct() {
+	function _initialize() {
 		;
 	}
 	/**

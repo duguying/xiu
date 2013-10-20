@@ -9,7 +9,6 @@ class IpsAction extends Action{
 	function index() {
 		$ips=$this->ipsModel->select();
 		$this->assign('iplist',$ips);
-// 		echo APP_PATH;
 		$this->display();
 		
 	}

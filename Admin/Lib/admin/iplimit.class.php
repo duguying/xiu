@@ -7,19 +7,7 @@
 class iplimit {
 	public $db;
 	function __construct() {
-// 		import('@.admin.Sqlite');
-// 		$this->db=Sqlite::GO(C('DB'));
-// 		$num=$this->db->query("SELECT count(*) as num FROM sqlite_master WHERE type='table' AND name='ip'");//check whether the table exist
-// 		$num=$num[0]['num'];
-// 		if(!$num){//if not exist, create it
-// 			$this->db->query('CREATE TABLE ip (ip int(20))');
-// 		}
-// 		$num1=$this->db->query("SELECT count(*) as num FROM sqlite_master WHERE type='table' AND name='ips'");//check whether the table exist
-// 		$num1=$num1[0]['num'];
-// 		if(!$num1){//if not exist, create it
-// 			$this->db->query('CREATE TABLE ips (ips int(15))');
-// 		}
-		$this->db=M("admin_iplimit");//限制IP表
+		$this->db=M("iplimit");//限制IP表
 	}
 	/**
 	 * 不存在则返回false
