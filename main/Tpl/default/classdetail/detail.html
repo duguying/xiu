@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$classarr['cls_name']}</title>
+<meta name="page_config" classid="{$classarr[cls_id]}" userid="{$userid}" />
+<include file="./Tpl/head.html" />
+<meta name="page_config" fenye='ajaxcmtcls/page/{$classarr[cls_id]}/' />
+<script src="{$config['root']}Public/js/page.classdetail.js"></script>
+<script src="{$config['root']}Public/js/clsstar.js"></script>
+<link type="text/css" rel="stylesheet" href="{$config['root']}Public/css/classdetail.css"/>
+</head>
+
+<body>
+<include file="./Tpl/nav_head.html" />
+<include file="./Tpl/site_head.html" />
+<include file="./Tpl/login_bar.html" />
+<div id="main">
+  <include file="./main/Tpl/classdetail/detail/classdetail_left.html" />
+  <include file="./main/Tpl/classdetail/detail/classdetail_right.html" />
+</div>
+<include file="./main/Tpl/classdetail/detail/classdetail_box.html" />
+<script src="{$config['root']}Public/js/cmtstar.js"></script>
+<include file="./Tpl/footer.html" />
+</body>
+</html>

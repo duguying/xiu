@@ -7,6 +7,7 @@ $xiu_config=array(//请不要修改变量名$xiu_config
 		'SESSION_AUTO_START' =>false,//禁止自动启动session
 		'URL_HTML_SUFFIX'=>'do',//页面为page.do形式
 		'URL_MODEL'          => '1', //URL模式
+		'DEFAULT_THEME'=>'default',
 		'ROOT_PATH'			=>getcwd().'/',//项目根目录，必须开启
 		'WWW_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']),//网站根目录，必须开启
 		'TPL_PATH'			=>preg_replace('/[\w|.]*$/i', '', $_SERVER['SCRIPT_NAME']).APP_NAME."/tpl/",//模版目录

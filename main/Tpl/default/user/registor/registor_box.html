@@ -1,0 +1,46 @@
+<!--REGISTOR-->
+<div class="form">
+	<form method="post" action="{$submit}">
+	<img class="reg_yanz" yz="{$verify}" />
+        <center>用户注册</center>
+    	<ul>
+            <li>
+              <h1>用户名</h1>
+              <input name="username" type="text" value="" chk="{$chk['username']}" placeholder="请输入用户名" class="f_content" />
+              <em>登录用，唯一</em>
+            </li>
+            <li>
+              <h1>邮箱</h1>
+              <input name="mail" type="text" value="" placeholder="请输入邮箱" class="f_content" />
+              <em>密保邮箱，唯一</em>
+            </li>
+            <li>
+              <h1>昵称</h1>
+              <input name="nickname" type="text" value="新用户" placeholder="请输入昵称" class="f_content" />
+              <em>显示在页面上</em>
+            </li>
+            <li>
+              <h1>密码</h1>
+              <input name="password" type="password" value="" placeholder="输入密码" class="f_content" />
+              <em>提示信息</em>
+            </li>
+            <li>
+              <h1>重复密码</h1>
+              <input type="password" value="" placeholder="重复密码" class="f_content" />
+              <em>提示信息</em>
+            </li>
+            <li>
+              <h1>验证码</h1>
+              <input name="yanz" type="text" value="" placeholder="输入验证码，点击刷新显示" class="f_content" />
+              <em>提示信息</em>
+            </li>
+            <li>
+              <h1><input name="agreement" type="checkbox" value="true" /></h1>
+              我同意<a href="javascript:void(0);">注册协议</a>
+            </li>
+        </ul><br/>
+        <div><input type="submit"  value="提交"/></div>
+    </form>
+	
+</div>
+<!--REGISTOR-->

@@ -1,0 +1,40 @@
+<link rel="shortcut icon" type="image/x-icon" href="{$config['root']}favicon.ico">
+<meta property="qc:admins" content="74261613356457511676437110516015" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="选修课,长江大学,长大,公选课" />
+<meta name="config" root="{$config['root']}" url_model="{$config['url_model']}" url_html_suffix="{$config['url_html_suffix']}" userid="{$config['userid']}" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="{$config['root']}Public/js/core.js"></script>
+<link type="text/css" rel="stylesheet" href="{$config['root']}Public/css/style.css"/>
+<!--[if IE]>
+	<script>
+function correctPNG()
+{
+  for(var i=0; i<document.images.length; i++)
+  {
+   var img = document.images[i]
+   var imgName = img.src.toUpperCase()
+   if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+   {
+   var imgID = (img.id) ? "id='" + img.id + "' " : ""
+   var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+   var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+   var imgStyle = "display:inline-block;" + img.style.cssText
+   if (img.align == "left") imgStyle = "float:left;" + imgStyle
+   if (img.align == "right") imgStyle = "float:right;" + imgStyle
+   if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle 
+   var strNewHTML = "<span " + imgID + imgClass + imgTitle
+   + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+   + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+   + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+   img.outerHTML = strNewHTML
+   i = i-1
+   };
+  };
+};
+if(navigator.userAgent.indexOf("MSIE")>-1)
+{
+window.attachEvent("onload", correctPNG);
+};
+	</script>
+<![endif]-->

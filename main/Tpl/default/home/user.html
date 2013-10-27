@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>独孤影的个人页面</title>
+<include file="./Tpl/head.html" />
+<link type="text/css" rel="stylesheet" href="{$config['root']}Public/css/home.css" />
+<style>
+  .item{
+    overflow: hidden;
+    display: block;
+  }
+  .ico{
+    width: 30px;
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+  .ico img{
+    border: none;
+    display: block;
+    height: 30px;
+    width: 30px;
+  }
+  .msg_ctt{
+    overflow: hidden;
+    width: 580px;/*容器*/
+  }
+  .item li{
+    display: block;
+    float: left;
+  }
+  .msg_ctt li{
+    clear: both;
+    margin-left: 8px;
+  }
+  .info{
+    color: #CCC;
+  }
+  .rpl li{
+    margin: 0;
+  }
+  .rpl textarea{
+    width: 550px;
+    height: 25px;
+    -webkit-resize: none;
+    -moz-resize: none;
+    resize: none;
+  }
+  .rpl input{
+    display: block;
+    height: 25px;
+    margin-top: 5px;
+    float: left;
+  }
+  .rpl img{
+    float: left;
+    width: 60px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+</style>
+<script>
+// 选项卡切换
+$(document).ready(function() {
+  
+  /**
+   * 显示分块
+   * @param  {[string]} tabClass [类选择器]
+   * @return {[none]}          [none]
+   */
+  function showTab (tabClass) {
+    $(".myinfo").hide();
+    $(".talk").hide();
+    $(".cmt").hide();
+    $(".topic").hide();
+    $("."+tabClass).show();
+  }
+  $("li[me]").click(function (e) {
+    $("li[tk]").attr("class","");
+    $("li[cmt]").attr("class","");
+    $("li[tpc]").attr("class","");
+    $("li[me]").attr("class","tnow");
+    showTab("myinfo");
+  });
+  $("li[tk]").click(function (e) {
+    $("li[cmt]").attr("class","");
+    $("li[tpc]").attr("class","");
+    $("li[me]").attr("class","");
+    $("li[tk]").attr("class","tnow");
+    showTab("talk");
+  });
+  $("li[cmt]").click(function (e) {
+    $("li[tpc]").attr("class","");
+    $("li[me]").attr("class","");
+    $("li[tk]").attr("class","");
+    $("li[cmt]").attr("class","tnow");
+    showTab("cmt");
+  });
+  $("li[tpc]").click(function (e) {
+    $("li[me]").attr("class","");
+    $("li[tk]").attr("class","");
+    $("li[cmt]").attr("class","");
+    $("li[tpc]").attr("class","tnow");
+    showTab("topic");
+  })
+});
+
+// 回复框获得焦点与失去焦点
+$(document).ready(function() {
+  $("textarea").val("");//清空
+  $("textarea[name=reply]").click(function (e){
+    if ($(this).css("height")=="25px") {
+      $(this).css("height","50px");
+    };
+    $(this).blur(function(e) {
+      $(this).css("height","25px");
+    })
+  });
+});
+  
+</script>
+</head>
+
+<body>
+<include file="./Tpl/nav_head.html" />
+<include file="./Tpl/site_head.html" />
+<include file="./Tpl/login_bar.html" />
+<div id="main">
+  <div class="h_left">
+    <ul class="tags">
+      <li tk class="tnow">发表的说说</li>
+      <li cmt>发表的评论</li>
+      <li tpc>发表的话题</li>
+    </ul>
+
+    <div class="talk">
+      <ul class="item">
+        <li class="ico"><img src="{$config['root']}Public/img/yuol_bb.png" alt="头像1" /></li>
+        <li class="msg_ctt">
+          <ul>
+            <li class="msg"><a href="javascript:void(0);">用户</a>:信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息1</li>
+            <li class="info">时间:2013-3-29</li>
+            <li class="rpl">
+              <ul>
+                <li>
+                  <textarea name="reply" cols="30" rows="10"></textarea>
+                </li>
+                <li>
+                  <input type="button" value="回复" />
+                  <img src="#" alt="验证码" />
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="item">
+        <li class="ico"><img src="{$config['root']}Public/img/yuol_bb.png" alt="头像2" /></li>
+        <li class="msg_ctt">
+          <ul>
+            <li class="msg"><a href="javascript:void(0);">用户</a>:信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息信息2</li>
+            <li class="info">时间:2013-3-29</li>
+            <li class="rpl">
+              <ul>
+                <li>
+                  <textarea name="reply" cols="30" rows="10"></textarea>
+                </li>
+                <li>
+                  <input type="button" value="回复" />
+                  <img src="#" alt="验证码" />
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="cmt" style="display:none;"></div>
+    <div class="topic" style="display:none;"></div>
+  </div>
+  <div class="h_right">
+    <div class="owner"> <img src="{$userinfo.usr_figure}"/> 
+    	<div class="username">{$userinfo.usr_nickname}<img src="{$config['root']}Public/img/men.png" /></div>
+        <a class="addf">加为好友</a>
+    </div>
+    <div class="ntalk" contenteditable="true" title="你可以在这儿直接编辑">这儿是最新的说说</div>
+  </div>
+</div>
+<include file="./Tpl/footer.html" />
+</body>
+</html>
