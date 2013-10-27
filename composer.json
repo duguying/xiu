@@ -1,0 +1,23 @@
+{
+    "name": "duguying/xiu",
+    "type": "library",
+    "description": "Logging for PHP 5.3",
+    "keywords": ["log","logging"],
+    "homepage": "https://github.com/duguying/xiu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rex Lee",
+            "email": "duguying2008@gmail.com",
+            "homepage": "http://www.duguying.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"xiu": "main/"}
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
+
