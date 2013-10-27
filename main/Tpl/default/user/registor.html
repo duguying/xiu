@@ -3,18 +3,18 @@
 <head>
 <title>用户注册</title>
 <meta name="description" content=""/>
-<include file="./Tpl/head.html" />
+<include file="default:_inc_:head" />
 <link rel="stylesheet" href="{$config['root']}Public/css/registor.css" />
 <script type="text/javascript" src="{$config['root']}Public/js/login.registor.js"></script>
 </head>
 
 <body>
-<include file="./Tpl/nav_head.html" />
-<include file="./Tpl/site_head.html" />
-<include file="./Tpl/login_bar.html" />
+<include file="default:_inc_:nav_head" />
+<include file="default:_inc_:site_head" />
+<include file="default:_inc_:login_bar" />
 <div id="main">
-	<include file="./main/Tpl/user/registor/registor_box.html" />
+	<include file="default:user:registor/registor_box" />
 </div>
-<include file="./Tpl/footer.html" />
+<include file="default:_inc_:footer" />
 </body>
 </html>

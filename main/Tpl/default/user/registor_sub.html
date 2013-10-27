@@ -3,7 +3,7 @@
 <head>
 <title>{$msg}</title>
 <meta name="description" content=""/>
-<include file="./Tpl/head.html" />
+<include file="default:_inc_:head" />
 <style type="text/css">
 .msg {
 	position: relative;
@@ -21,12 +21,13 @@
 </head>
 
 <body>
-<include file="./Tpl/nav_head.html" />
-<include file="./Tpl/site_head.html" />
+<include file="default:_inc_:nav_head" />
+<include file="default:_inc_:site_head" />
+
 <div id="login_bar"></div>
 <div id="main">
   <div class="msg">{$msg} </div>
 </div>
-<include file="./Tpl/footer.html" />
+<include file="default:_inc_:footer" />
 </body>
 </html>
